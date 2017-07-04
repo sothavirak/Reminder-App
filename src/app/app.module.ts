@@ -11,10 +11,15 @@ import { CustomersPage }  from '../pages/customers/customers';
 
 import { IonicStorageModule } from '@ionic/storage';
 
+import { TabsPage } from '../pages/tabs/tabs';
+import { RegistrationPage } from '../pages/registration/registration';
+
 @NgModule({
   declarations: [
     MyApp,
-    CustomersPage
+    CustomersPage,
+    TabsPage,
+    RegistrationPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +29,9 @@ import { IonicStorageModule } from '@ionic/storage';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CustomersPage
+    CustomersPage,
+    TabsPage,
+    RegistrationPage
   ],
   providers: [
     StatusBar,

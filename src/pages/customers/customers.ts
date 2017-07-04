@@ -15,13 +15,6 @@ export class CustomersPage implements OnInit {
 
 	constructor(private customerService: CustomerService) {}
 
-	onRegisterCustomer(form: NgForm) {
-		this.customerService.addItem(form.value.customerName, form.value.phoneNumber);
-		form.reset();
-		this.loadCustomers();
-		console.log(form);
-	}
-
 	ngOnInit() {
 		this.customerService.fetchCustomers();
 	}

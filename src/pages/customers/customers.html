@@ -8,20 +8,6 @@
 
 
 <ion-content padding>
-
-	<form #f="ngForm" (ngSubmit)="onRegisterCustomer(f)">
-		<ion-list>
-			<ion-item>
-				<ion-label stacked>Name</ion-label>
-				<ion-input type="text" name="customerName" placeholder="Full Name" ngModel required></ion-input>
-			</ion-item>
-			<ion-item>
-				<ion-label stacked>Mobile Number</ion-label>
-				<ion-input type="number" name="phoneNumber" placeholder="01234567654" ngModel required></ion-input>
-			</ion-item>
-		</ion-list>
-		<button ion-button type="submit" block [disabled]="!f.valid">Register</button>
-	</form>
 	<ion-list>
 		<ion-item *ngFor="let cust of customerList">
 			<h3>{{ cust.customerName }}</h3>
