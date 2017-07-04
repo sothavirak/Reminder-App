@@ -5,6 +5,8 @@ import { CustomerService } from '../../services/customer';
 
 import { Customer } from '../../models/Customer';
 
+import { CustomerPage } from '../customer/customer';
+
 @Component({
   selector: 'page-customers',
   templateUrl: 'customers.html',
@@ -12,6 +14,8 @@ import { Customer } from '../../models/Customer';
 export class CustomersPage implements OnInit {
 
 	customerList: Customer[];
+
+	customerPage = CustomerPage;
 
 	constructor(private customerService: CustomerService) {}
 

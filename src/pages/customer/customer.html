@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Customer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list>
+		<ion-item>{{ customer.customerName }}</ion-item>
+		<ion-item>{{ customer.phoneNumber }}</ion-item>
+	</ion-list>
+
+	<form #f="ngForm" (ngSubmit)="onSendSMS(f)">
+		<ion-list>
+			<ion-item>
+				<ion-label stacked>Message</ion-label>
+				<ion-input type="text" name="message" placeholder="Enter your message here" ngModel required></ion-input>
+			</ion-item>			
+		</ion-list>
+		<button ion-button type="submit" block [disabled]="!f.valid">Send</button>
+	</form>
+</ion-content>

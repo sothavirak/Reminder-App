@@ -14,12 +14,17 @@ import { IonicStorageModule } from '@ionic/storage';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RegistrationPage } from '../pages/registration/registration';
 
+import { CustomerPage } from '../pages/customer/customer';
+
+import { SMS } from '@ionic-native/sms';
+
 @NgModule({
   declarations: [
     MyApp,
     CustomersPage,
     TabsPage,
-    RegistrationPage
+    RegistrationPage,
+    CustomerPage
   ],
   imports: [
     BrowserModule,
@@ -31,13 +36,15 @@ import { RegistrationPage } from '../pages/registration/registration';
     MyApp,
     CustomersPage,
     TabsPage,
-    RegistrationPage
+    RegistrationPage,
+    CustomerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CustomerService
+    CustomerService,
+    SMS
   ]
 })
 export class AppModule {}

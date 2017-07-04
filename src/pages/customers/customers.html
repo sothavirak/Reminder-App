@@ -9,9 +9,14 @@
 
 <ion-content padding>
 	<ion-list>
-		<ion-item *ngFor="let cust of customerList">
-			<h3>{{ cust.customerName }}</h3>
-			<h5>{{ cust.phoneNumber }}</h5>
-		</ion-item>
+		<button 
+			ion-item 
+			*ngFor="let cust of customerList"
+			[navPush]="customerPage"
+			[navParams]="cust">
+			<ion-icon name="mail" item-left></ion-icon>
+			<h2>{{ cust.customerName | uppercase }}</h2>
+			<p>{{ cust.phoneNumber }}</p>
+		</button>
 	</ion-list>
 </ion-content>
